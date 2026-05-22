@@ -69,7 +69,7 @@ evaluated on three tasks × three shot counts = **9 (task, shot) cells**:
 ### 1. Install
 
 ```bash
-git clone https://github.com/boodscode237/EnMed.git
+git clone https://github.com/<your-username>/enmed.git
 cd enmed
 python -m venv .venv && source .venv/bin/activate
 pip install -e .            # installs the `enmed` package + dependencies
@@ -112,18 +112,6 @@ on a laptop:
 make metrics stats figures
 ```
 
-### 4. Train from scratch, or run on CPU (notebook)
-
-[`notebooks/EnMed_train_qwen3_14b_unsloth.ipynb`](notebooks/EnMed_train_qwen3_14b_unsloth.ipynb)
-is a complete, self-contained walkthrough of the training pipeline with Unsloth:
-loading Qwen3-14B in 4-bit, LoRA, the full data-engineering pipeline, the
-`SFTTrainer` loop, saving/merging, and **exporting quantized GGUF checkpoints**.
-
-Its final section shows how to **run the quantized model on a CPU-only machine**
-(via `llama-cpp-python` or Ollama) — no GPU, CUDA, or Unsloth required. The
-recommended artifact for commodity hardware is the `q4_k_m` GGUF (~8.5 GB,
-~10–12 GB RAM for the 14B model).
-
 ---
 
 ## Hardware & runtime
@@ -163,7 +151,7 @@ enmed/
 │   ├── viz/                 # all paper figures
 │   └── utils/               # seeding, logging, IO
 ├── scripts/                 # 01..07 numbered CLI entry points
-├── notebooks/               # end-to-end training notebook (Unsloth, Qwen3-14B)
+├── notebooks/               # original Colab notebooks (reference)
 ├── data/                    # raw + processed datasets (gitignored)
 ├── results/                 # predictions, metrics, stats, figures
 ├── tests/                   # unit tests for metrics & stats
@@ -183,10 +171,10 @@ See [`docs/REPRODUCE.md`](docs/REPRODUCE.md) for a step-by-step walkthrough and
 @unpublished{abodoeloundou2025enmed,
   title  = {Cross-Lingual Domain Adaptation and Multi-Task Fine-Tuning
             for High-Fidelity Medical Language Models},
-  author = {Abodo Eloundou, B. D. and Malykh, V.},
+  author = {Abodo Eloundou, Brice Donald and Malykh, Valentin},
   note   = {Submitted to Springer Lecture Notes in Computer Science (LNCS).
             Under review. ITMO University / MTS Web Services, Saint Petersburg, Russia},
-  year   = {2026}
+  year   = {2025}
 }
 ```
 

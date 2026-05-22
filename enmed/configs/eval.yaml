@@ -1,0 +1,17 @@
+# Stages 04-07 — inference, metrics, statistics, figures.
+defaults: base.yaml
+inference:
+  max_new_tokens: {mcqa: 8, extqa: 128, absqa: 512}
+  temperature: 0.0
+  mcqa_decoding: logprob          # logprob | generate
+judge:
+  model: gemma-3-12b-it           # LLM-as-judge for AbsQA
+  scale: [1, 5]
+  dimensions: [factual, completeness, relevance, safety]
+  temperature: 0.0
+  runs_per_item: 3                # majority vote
+stats:
+  reference: Qwen3-14B-vanilla
+  alpha: 0.05
+  correction: benjamini-hochberg  # benjamini-hochberg | bonferroni | none
+  critical_difference: 6.06

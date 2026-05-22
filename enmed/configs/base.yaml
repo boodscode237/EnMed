@@ -1,0 +1,24 @@
+# Shared settings inherited by all stages.
+seed: 12181531
+train_seed: 3407
+max_seq_length: 8192
+backbone: unsloth/Qwen3-14B-unsloth-bnb-4bit
+load_in_4bit: true
+output_root: ./models
+results_root: ./results
+data_root: ./data
+
+# The eight systems evaluated in Phase 1.
+systems:
+  - Qwen3-14B-vanilla
+  - EnMed-DAPT
+  - EnMed-Unified
+  - EnMed-MCQA
+  - EnMed-ExtQA
+  - EnMed-AbsQA
+  - Qwen3-8B
+  - Mistral-7B-Instruct-v0.3
+
+# The 3 tasks x 3 shot counts = 9 evaluation cells.
+tasks: [mcqa, extqa, absqa]
+shots: [0, 3, 5]

@@ -1,0 +1,31 @@
+# Data & models (large; not versioned)
+data/raw/*
+data/processed/*
+data/corpus/*
+models/
+*.safetensors
+*.bin
+*.gguf
+
+# Results that are regenerated (keep .gitkeep)
+results/predictions/*.jsonl
+results/metrics/*.csv
+results/stats/*.csv
+results/figures/*.png
+!**/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Secrets / env
+.env
+*.key
+wandb/
+
+# OS
+.DS_Store

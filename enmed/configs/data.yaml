@@ -1,0 +1,21 @@
+# Stage 01 — data engineering.
+datasets:
+  mcqa:
+    hf_id: DrBenchmark/FrenchMedMCQA      # multiple-choice
+    metric: accuracy
+    test_size: 622
+  extqa:
+    hf_id: local:CAS                       # CAS clinical-case extractive QA
+    metric: token_f1
+    test_size: 207
+  absqa:
+    hf_id: local:MediQAl                   # abstractive QA
+    metric: llm_judge
+    test_size: 248
+
+# DAPT corpus (Mannion et al. 2026 French health corpus).
+dapt_corpus:
+  hf_id: local:french-health-corpus
+  text_field: text
+
+split_ratios: {train: 0.8, dev: 0.1, test: 0.1}
