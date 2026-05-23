@@ -69,7 +69,7 @@ evaluated on three tasks × three shot counts = **9 (task, shot) cells**:
 ### 1. Install
 
 ```bash
-git clone https://github.com/<your-username>/enmed.git
+git clone https://github.com/boodscode237/EnMed.git
 cd enmed
 python -m venv .venv && source .venv/bin/activate
 pip install -e .            # installs the `enmed` package + dependencies
