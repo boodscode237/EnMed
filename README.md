@@ -7,7 +7,7 @@ protocol.
 
 > **Paper:** *Cross-Lingual Domain Adaptation and Multi-Task Fine-Tuning for
 > High-Fidelity Medical Language Models* — B. D. Abodo Eloundou & V. Malykh
-> (ITMO University / MTS Web Services). Submitted to Springer LNCS, under review.
+> (ITMO University / MTS Web Services). Submitted to Neuroinformatics-2026, under review.
 
 This repository reproduces the full Phase 1 pipeline **end to end**, from data
 engineering through training, inference, evaluation, and the statistical analysis
@@ -184,7 +184,7 @@ See [`docs/REPRODUCE.md`](docs/REPRODUCE.md) for a step-by-step walkthrough and
   title  = {Cross-Lingual Domain Adaptation and Multi-Task Fine-Tuning
             for High-Fidelity Medical Language Models},
   author = {Abodo Eloundou, B. D. and Malykh, V.},
-  note   = {Submitted to Springer Lecture Notes in Computer Science (LNCS).
+  note   = {Submitted to Neuroinformatics-2026.
             Under review. ITMO University / MTS Web Services, Saint Petersburg, Russia},
   year   = {2026}
 }
